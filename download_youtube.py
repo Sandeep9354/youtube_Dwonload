@@ -26,10 +26,10 @@ def download():
 
         # yt-dlp command to download video
         command = [
-            r'C:\Users\kumar\AppData\Roaming\Python\Python313\Scripts\yt-dlp.exe',
-            '-o', video_path,  
-            '-f', 'best',  # Download best quality format
-            video_url
+          "yt-dlp",  # No need for full path; it will be installed via requirements.txt
+    "-o", os.path.join(DOWNLOAD_FOLDER, "YouTube_Video.mp4"),
+    "-f", "best",
+    video_url
         ]
 
         # Run download command
